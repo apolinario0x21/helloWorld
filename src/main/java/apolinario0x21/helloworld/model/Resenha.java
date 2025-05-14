@@ -35,6 +35,10 @@ public class Resenha   {
     @JsonIgnoreProperties("resenha")
     private Destino destino;
 
+    @ManyToOne
+    @JsonIgnoreProperties("resenha")
+    private Viajante viajante;
+
     public Long getId() {
         return id;
     }
@@ -89,6 +93,14 @@ public class Resenha   {
 
     public void setDestino(Destino destino) {
         this.destino = destino;
+    }
+
+    public Viajante getViajante() {
+        return viajante;
+    }
+
+    public void setViajante(Viajante viajante) {
+        this.viajante = viajante;
     }
 }
 
